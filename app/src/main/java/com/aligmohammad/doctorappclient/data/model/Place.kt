@@ -1,0 +1,47 @@
+package com.aligmohammad.doctorappclient.data.model
+
+data class Place(
+    val placeDetails: String?,
+    val locationName: String?,
+    val date: String?,
+    val time: String?,
+    val imageUrl: String?,
+    val location: String?,
+    val rating: Int?,
+    val watchers: Int?,
+    val visitors: Int?,
+    val name: String?,
+    var city: String?,
+    var district: String?,
+    var insuranceCompany: String?,
+    var insuranceNumber: String?,
+    var appointments: List<String>?,
+    var consultation: List<String>?,
+    var orders: List<String>?,
+    var phone: String?,
+    var type: String?,
+    var medicineAvailable: List<String>?,
+) {
+    constructor() : this(
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        0,
+        0,
+        0,
+        "",
+        "",
+        "",
+        "",
+        "",
+        null,
+        null,
+        null,
+        "",
+        "",
+        listOf()
+    )
+}

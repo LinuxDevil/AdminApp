@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~
+  ~ Copyright RectiCode(c) 2020.
+  ~ All Rights Reserved
+  ~
+  ~ This product is protected by copyright and distributed under
+  ~ licenses restricting copying, distribution and de-compilation.
+  ~
+  ~ Created by Ali Mohammad
+  ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="listener"
+            type="com.aligmohammad.doctorappclient.ui.dialogs.OnDialogInteract" />
+
+        <variable
+            name="viewModel"
+            type="com.aligmohammad.doctorappclient.ui.dialogs.privatehospitals.PrivateHospitalsViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        tools:context=".ui.dialogs.privatehospitals.PrivateHospitalsFragment">
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/back_black_icon"
+                android:gravity="center_vertical"
+                android:onClick="@{listener::onBackButtonClicked}" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:gravity="start"
+                android:text="Private Hospitals"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/operations"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:drawableEnd="@drawable/next_icon"
+            android:onClick="@{listener::onButtonClicked}"
+            android:text="@string/operations"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/external"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:drawableEnd="@drawable/next_icon"
+            android:onClick="@{listener::onButtonClicked}"
+            android:text="@string/external"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/labs"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:drawableEnd="@drawable/next_icon"
+            android:onClick="@{listener::onButtonClicked}"
+            android:text="@string/labs"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/xray"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:drawableEnd="@drawable/next_icon"
+            android:onClick="@{listener::onButtonClicked}"
+            android:text="@string/x_ray"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/naturalist"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:drawableEnd="@drawable/next_icon"
+            android:onClick="@{listener::onButtonClicked}"
+            android:text="@string/naturalist"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</layout>

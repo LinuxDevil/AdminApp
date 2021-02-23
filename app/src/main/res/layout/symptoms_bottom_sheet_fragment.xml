@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~
+  ~ Copyright RectiCode(c) 2020.
+  ~ All Rights Reserved
+  ~
+  ~ This product is protected by copyright and distributed under
+  ~ licenses restricting copying, distribution and de-compilation.
+  ~
+  ~ Created by Ali Mohammad
+  ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="listener"
+            type="com.aligmohammad.doctorappclient.ui.dialogs.OnDialogInteract" />
+
+        <variable
+            name="viewModel"
+            type="com.aligmohammad.doctorappclient.ui.dialogs.doctorconsulting.symptoms.SymptomsBottomSheetViewModel" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.dialogs.doctorconsulting.symptoms.SymptomsBottomSheetFragment">
+
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/back_black_icon"
+                android:gravity="center_vertical"
+                android:onClick="@{listener::onBackButtonClicked}" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:gravity="start"
+                android:text="Consult General Doctor"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/selectSymptomsTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:labelFor="@id/testSpinner"
+            android:text="Select The symptoms"
+            app:layout_constraintTop_toBottomOf="@id/header" />
+
+        <Spinner
+            android:id="@+id/symptomsSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:drawableEnd="@drawable/date_icon"
+            android:entries="@array/spinner"
+            android:inputType="date"
+            android:padding="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/selectSymptomsTextView" />
+
+        <TextView
+            android:id="@+id/heatTempTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:labelFor="@id/heatTempEditText"
+            android:text="@string/heat_temperature"
+            app:layout_constraintTop_toBottomOf="@id/symptomsSpinner" />
+
+        <EditText
+            android:id="@+id/heatTempEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:drawableEnd="@drawable/ic_temp"
+            android:inputType="numberDecimal"
+            android:padding="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/heatTempTextView" />
+
+        <Button
+            android:id="@+id/confirm_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:onClick="@{listener::onButtonClicked}"
+            android:text="@string/consult"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/heatTempEditText" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

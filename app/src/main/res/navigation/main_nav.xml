@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~
+  ~ Copyright RectiCode(c) 2020.
+  ~ All Rights Reserved
+  ~
+  ~ This product is protected by copyright and distributed under
+  ~ licenses restricting copying, distribution and de-compilation.
+  ~
+  ~ Created by Ali Mohammad
+  ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.aligmohammad.doctorappclient.ui.fragments.authframent.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/loginToHome"
+            app:destination="@id/home_user_nav"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popUpTo="@id/main_nav"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+
+    <include app:graph="@navigation/home_user_nav" />
+
+</navigation>

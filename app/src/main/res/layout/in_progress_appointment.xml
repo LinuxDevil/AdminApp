@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?><!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~
+  ~ Copyright RectiCode(c) 2020.
+  ~ All Rights Reserved
+  ~
+  ~ This product is protected by copyright and distributed under
+  ~ licenses restricting copying, distribution and de-compilation.
+  ~
+  ~ Created by Ali Mohammad
+  ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.aligmohammad.doctorappclient.data.model.firebasemodels.AppointmentFirebaseModel" />
+
+        <variable
+            name="listener"
+            type="com.aligmohammad.doctorappclient.ui.adapters.OnMenuItemClick" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:onClick="@{listener::onClick}"
+        android:tag="@{data.userId}">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/doctorImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription="@string/doctor_image"
+                android:imageUrl="@{data.userId}"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <LinearLayout
+                android:id="@+id/middleSectionLinear"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/doctorImage"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/doctorName"
+                    style="@style/TextAppearance.AppCompat.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{data.date}" />
+
+                <TextView
+                    android:id="@+id/doctorLocation"
+                    style="@style/TextAppearance.AppCompat.Body1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{data.time}"
+                    android:textStyle="italic" />
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/middleRightSectionLinear"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/middleSectionLinear"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+                    android:id="@+id/moreButton"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:text="More"
+                    android:textSize="12sp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/cancelButton"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:text="Cancel"
+                    android:textSize="12sp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

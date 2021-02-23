@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="listener"
+            type="com.aligmohammad.doctorappclient.ui.dialogs.OnDialogInteract" />
+
+        <variable
+            name="viewModel"
+            type="com.aligmohammad.doctorappclient.ui.dialogs.appointmentmanagment.detailappointment.DetailsAppointmentBottomSheetViewModel" />
+
+        <variable
+            name="appointment"
+            type="com.aligmohammad.doctorappclient.data.model.firebasemodels.AppointmentFirebaseModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.dialogs.appointmentmanagment.detailappointment.DetailsAppointmentBottomSheetFragment">
+
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/back_black_icon"
+                android:gravity="center_vertical"
+                android:onClick="@{listener::onBackButtonClicked}" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:gravity="start"
+                android:text="Appointment Details"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:contentDescription="Image"
+            android:scaleType="centerCrop"
+            android:imageUrl="@{appointment.userId}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header" />
+
+        <TextView
+            android:id="@+id/clientTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/active_drawable"
+            android:padding="5dp"
+            android:text="@{appointment.userId}"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image" />
+
+
+        <TextView
+            android:id="@+id/dateTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/active_drawable"
+            android:padding="5dp"
+            android:text="@{appointment.date}"
+            android:textColor="@color/black"
+            app:drawableEndCompat="@drawable/date_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clientTextView" />
+
+
+        <TextView
+            android:id="@+id/timeTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/active_drawable"
+            android:padding="5dp"
+            android:text="@{appointment.time}"
+            android:textColor="@color/black"
+            app:drawableEndCompat="@drawable/time_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dateTextView" />
+
+
+
+        <TextView
+            android:id="@+id/insuranceName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/active_drawable"
+            android:padding="5dp"
+            android:text="Insurance Name: Example Insurance"
+            android:textColor="@color/black"
+            app:drawableEndCompat="@drawable/ic_baseline_healing_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/timeTextView" />
+
+        <TextView
+            android:id="@+id/insuranceNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/active_drawable"
+            android:padding="5dp"
+            android:text="Insurance Number: +962777733340"
+            android:textColor="@color/black"
+            app:drawableEndCompat="@drawable/call_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/insuranceName" />
+
+
+        <Button
+            android:id="@+id/reserveButton"
+            style="@style/Theme.DoctorApp.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/circular_menu_item"
+            android:text="@string/back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/insuranceNumber" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

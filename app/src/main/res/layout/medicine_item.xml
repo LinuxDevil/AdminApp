@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?><!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~
+  ~ Copyright RectiCode(c) 2020.
+  ~ All Rights Reserved
+  ~
+  ~ This product is protected by copyright and distributed under
+  ~ licenses restricting copying, distribution and de-compilation.
+  ~
+  ~ Created by Ali Mohammad
+  ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="medicine"
+            type="com.aligmohammad.doctorappclient.data.model.Medicine" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/medicineName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="70"
+                android:text="@{medicine.name}"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="30"
+                android:drawableEnd="@drawable/delete_icon"
+                android:text="@{medicine.price.toString().concat(medicine.currency)}"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

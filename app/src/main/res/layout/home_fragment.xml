@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?><!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~
+  ~ Copyright RectiCode(c) 2020.
+  ~ All Rights Reserved
+  ~
+  ~ This product is protected by copyright and distributed under
+  ~ licenses restricting copying, distribution and de-compilation.
+  ~
+  ~ Created by Ali Mohammad
+  ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.fragments.homefragment.HomeFragment">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.aligmohammad.doctorappclient.ui.fragments.homefragment.HomeViewModel" />
+
+    </data>
+
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.motion.widget.MotionLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            app:layoutDescription="@xml/home_fragment_scene">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                style="@style/Widget.MaterialComponents.Toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </com.google.android.material.appbar.MaterialToolbar>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/homeListRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toTopOf="@id/adBanner"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/toolbar"
+                tools:listitem="@layout/home_screen_menu_item" />
+
+
+            <com.google.android.gms.ads.AdView
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adBanner"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                ads:layout_constraintBottom_toBottomOf="parent"
+                ads:layout_constraintStart_toStartOf="parent"
+                ads:layout_constraintEnd_toEndOf="parent"
+                ads:adSize="BANNER"
+                ads:adUnitId="ca-app-pub-4200194132122118/6620452316">
+            </com.google.android.gms.ads.AdView>
+
+        </androidx.constraintlayout.motion.widget.MotionLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigationView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:menu="@menu/home_menu"/>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+
+</layout>

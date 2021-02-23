@@ -1,0 +1,562 @@
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~
+  ~ Copyright RectiCode(c) 2020.
+  ~ All Rights Reserved
+  ~
+  ~ This product is protected by copyright and distributed under
+  ~ licenses restricting copying, distribution and de-compilation.
+  ~
+  ~ Created by Ali Mohammad
+  ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<resources>
+    <string name="app_name">عيادتي</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_logo">App Logo</string>
+    <string name="username">Username</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="register">Register</string>
+    <string name="code">Code</string>
+    <string name="confirm">Confirm</string>
+    <string name="choose_insurance_company">Choose Insurance Company</string>
+    <string name="insurance_number">Insurance Number</string>
+    <string name="skip">Skip</string>
+    <string name="menu_item_image">Menu Item Image</string>
+    <string name="cities">Cities</string>
+    <string name="hospitals">Hospitals</string>
+    <string name="external">External</string>
+    <string name="labs">Labs</string>
+    <string name="x_ray">X-Ray</string>
+    <string name="naturalist">Naturalist</string>
+    <string name="select_date">Select Date</string>
+    <string name="select_time">Select Time</string>
+    <string name="major">Major</string>
+    <string name="doctors">Doctors</string>
+    <string name="reserve">Reserve</string>
+    <string name="tests">Tests</string>
+    <string name="required_tests">Required Tests</string>
+    <string name="time_available">Time Available</string>
+    <string name="operations">Operations</string>
+    <string name="doctor_name">Doctor Name</string>
+    <string name="settings">Settings</string>
+    <string name="profile">Profile</string>
+    <string name="logout">Logout</string>
+    <string name="search">Search...</string>
+    <string name="doctor_image">Doctor Image</string>
+    <string name="backgroundImage">background image</string>
+    <string name="qualifications">Qualifications</string>
+    <string name="lineImage">line image</string>
+    <string name="reserve_an_appointment">Reserve an appointment</string>
+    <string name="ads_banner">Ads Banner</string>
+    <string name="medical">Medical</string>
+    <string name="ad_banner">Ad banner</string>
+    <string name="district">District</string>
+    <string name="ricotta_image">ricotta image</string>
+    <string name="select_ricotta_image">Select Ricotta Image</string>
+    <string name="medicine_available">Medicine Available</string>
+    <string name="browse_image">Browse Image</string>
+    <string name="order">Order</string>
+    <string name="consult_general_doctor">Consult General Doctor</string>
+    <string name="request_a_doctor">Request a Doctor</string>
+    <string name="request_a_nurse">Request a Nurse</string>
+    <string name="heat_temperature">Heat temperature</string>
+    <string name="consult">Consult</string>
+    <string name="new_appointment">New Appointment</string>
+    <string name="in_progress">In Progress</string>
+    <string name="history">History</string>
+    <string name="result">Result</string>
+    <string name="lorem40">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A cum debitis delectus eaque excepturi facere harum incidunt inventore ipsa ipsum, itaque molestiae mollitia neque odit pariatur placeat provident quasi recusandae veniam voluptates. Aspernatur doloribus eius, laboriosam laudantium provident quos reprehenderit.</string>
+    <string name="lorem80">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A cum debitis delectus eaque excepturi facere harum incidunt inventore ipsa ipsum, itaque molestiae mollitia neque odit pariatur placeat provident quasi recusandae veniam voluptates. Aspernatur doloribus eius, laboriosam laudantium provident quos reprehenderit.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A cum debitis delectus eaque excepturi facere harum incidunt inventore ipsa ipsum, itaque molestiae mollitia neque odit pariatur placeat provident quasi recusandae veniam voluptates. Aspernatur doloribus eius, laboriosam laudantium provident quos reprehenderit
+    </string>
+    <string name="medicine">Medicine</string>
+    <string name="select_location">Select Location</string>
+    <string name="select_pharmacy">Select Pharmacy</string>
+    <string name="delivery_option">Delivery Option</string>
+    <string name="request_medicine">Request Medicine</string>
+    <string name="select_city">Select City</string>
+    <string name="select_district">Select District</string>
+    <string name="select_doctor_major">Select Doctor Major</string>
+    <string name="request">Request</string>
+    <string name="it_s_best_to_cancel_an_appointment_before_1_hour_at_least">*** It’s best to cancel an appointment before 1 hour at least</string>
+    <string name="add_appointment">Add Appointment</string>
+    <string name="appointment_duration">Appointment Duration</string>
+    <string name="current_appointments">Current Appointments</string>
+    <string name="cancel_appointment">Cancel Appointment</string>
+    <string name="my_appointments">My Appointments</string>
+    <string name="back">Back</string>
+    <string name="period">Period</string>
+    <string name="day_time">Day Time</string>
+    <string name="night_time">Night Time</string>
+    <string name="id_number">ID Number</string>
+    <string name="language">Language</string>
+    <string name="default_notification_channel_id">chaneeeel</string>
+    <string name="fcm_message">title</string>
+    <array name="spinner">
+        <item>NatHealth</item>
+    </array>
+    <array name="majors">
+        <item>أمراض الأطفال
+        </item>
+        <item>أمراض الأعصاب
+        </item>
+        <item>أمراض الأورام السريري
+        </item>
+        <item>أمراض الجهاز الهضمي
+        </item>
+        <item>أمراض الحساسية والمناعة
+        </item>
+        <item>أمراض الدم والأورام
+        </item>
+        <item>أمراض القلب
+        </item>
+        <item>أمراض الكلى
+        </item>
+        <item>أمراض النسائية والتوليد
+        </item>
+        <item>أمراض وجراحة العيون
+        </item>
+        <item>الأذن والأنف والحنجرة
+        </item>
+        <item>الأمراض الإنتانية
+        </item>
+        <item>الأمراض الجلدية والتناسلية
+        </item>
+        <item>الأمراض الداخلية العامة
+        </item>
+        <item>الأمراض الرثوية
+        </item>
+        <item>الأمراض الصدرية
+        </item>
+        <item>الأمراض النفسية
+        </item>
+        <item>الجراحة العامة
+        </item>
+        <item>الطب الطبيعي والتأهيل
+        </item>
+        <item>الطب النووي
+        </item>
+        <item>امراض الدم و السرطان
+        </item>
+        <item>امراض الغدد الصم والسكري
+        </item>
+        <item>طب الاسنان
+        </item>
+        <item>تقويم الأسنان والفكين
+        </item>
+        <item>جراحة الأوعية الدموية
+        </item>
+        <item>جراحة الاطفال
+        </item>
+        <item>جراحة الترميم والتجميل
+        </item>
+        <item>جراحة الدماغ والأعصاب
+        </item>
+        <item>
+            جراحة الصدر
+
+        </item>
+        <item>
+            جراحة العظام والمفاصل
+
+        </item>
+        <item>
+            جراحة القلب
+
+        </item>
+        <item>
+            جراحة القولون والشرج والمستقيم
+
+        </item>
+        <item>
+            جراحة الكبد والبنكرياس
+
+        </item>
+        <item>
+            جراحة الكلى والمسالك البولية
+
+        </item>
+        <item>
+            جراحة الوجه والفم والفكين
+
+        </item>
+        <item>
+            طب اسنان الاطفال
+
+        </item>
+        <item>
+            طب الاسرة
+        </item>
+    </array>
+    <array name="cities">
+        <item>عمان</item>
+        <item>اربد</item>
+        <item>الزرقاء</item>
+        <item>عجلون</item>
+        <item>مأدبا</item>
+        <item>المفرق</item>
+        <item>العقبة</item>
+        <item>جرش</item>
+        <item>الكرك</item>
+        <item>الطفيلة</item>
+        <item>السلط</item>
+        <item>معان</item>
+    </array>
+
+    <array name="amman_district">
+        <item>ابو علندا
+        </item>
+        <item>ابو نصير
+        </item>
+        <item>الاشرفية
+        </item>
+        <item>البقعة
+        </item>
+        <item>البنيات
+        </item>
+        <item>الجاردنز
+        </item>
+        <item>الجبل الاخضر
+        </item>
+        <item>الجبيهة (عمان)
+        </item>
+        <item>الجندويل
+        </item>
+        <item>الجويدة
+        </item>
+        <item>الجيزة
+        </item>
+        <item>الدوار الاول
+        </item>
+        <item>الدوار الثالث
+        </item>
+        <item>الدوار الثامن
+        </item>
+        <item>الدوار الثاني
+        </item>
+        <item>الدوار الخامس
+        </item>
+        <item>الدوار الرابع
+        </item>
+        <item>الدوار السابع
+        </item>
+        <item>الدوار السادس
+        </item>
+        <item>الديار
+        </item>
+        <item>الذراع الغربي
+        </item>
+        <item>الرابية
+        </item>
+        <item>الرجيب
+        </item>
+        <item>الشميساني
+        </item>
+        <item>الصويفية
+        </item>
+        <item>الطنيب
+        </item>
+        <item>الظهير
+        </item>
+        <item>القسطل
+        </item>
+        <item>القويسمة
+        </item>
+        <item>الكمالية
+        </item>
+        <item>الكوم
+        </item>
+        <item>اللبن
+        </item>
+        <item>المحطة (حي)
+        </item>
+        <item>المدينة الرياضية
+        </item>
+        <item>المقابلين
+        </item>
+        <item>المنارة
+        </item>
+        <item>الموقر
+        </item>
+        <item>الهاشمي الجنوبي
+        </item>
+        <item>الهاشمي الشمالي
+        </item>
+        <item>الوحدات
+        </item>
+        <item>اليادودة
+        </item>
+        <item>الياسمين
+        </item>
+        <item>اليرموك
+        </item>
+        <item>ام نوراه
+        </item>
+        <item>أم السماق
+        </item>
+        <item>أم أذينة
+        </item>
+        <item>بدر
+        </item>
+        <item>بسمان
+        </item>
+        <item>بيادر وادي السير
+        </item>
+        <item>تلاع العلي
+        </item>
+        <item>جاوا
+        </item>
+        <item>جبل التاج
+        </item>
+        <item>جبل الجوفة
+        </item>
+        <item>جبل الحسين
+        </item>
+        <item>جبل القصور
+        </item>
+        <item>جبل اللويبدة
+        </item>
+        <item>جبل المريخ
+        </item>
+        <item>جبل النزهة
+        </item>
+        <item>جبل النصر
+        </item>
+        <item>جبل النظيف
+        </item>
+        <item>جبل عمان
+        </item>
+        <item>حسبان
+        </item>
+        <item>حطين
+        </item>
+        <item>حي الخالدين
+        </item>
+        <item>حي الرابية (عمان)
+        </item>
+        <item>حي الصاحين
+        </item>
+        <item>حي الطفايلة (عمان)
+        </item>
+        <item>حي المزارع
+        </item>
+        <item>حي غمدان
+        </item>
+        <item>حي نزال
+        </item>
+        <item>خربة السوق
+        </item>
+        <item>خلدا
+        </item>
+        <item>دابوق
+        </item>
+        <item>دير غبار
+        </item>
+        <item>راس العين
+        </item>
+        <item>سحاب
+        </item>
+        <item>شارع الاردن
+        </item>
+        <item>شارع الجامعة
+        </item>
+        <item>شارع المدينة
+        </item>
+        <item>شارع مكة
+        </item>
+        <item>شفا بدران
+        </item>
+        <item>شميساني
+        </item>
+        <item>صافوط
+        </item>
+        <item>صالحية العابد
+        </item>
+        <item>صويلح
+        </item>
+        <item>ضاحية الاقصى
+        </item>
+        <item>ضاحية الامير حسن
+        </item>
+        <item>ضاحية الامير راشد
+        </item>
+        <item>ضاحية الرشيد
+        </item>
+        <item>ضاحية النخيل (عمان)
+        </item>
+        <item>ضاحية الياسمين
+        </item>
+        <item>طبربور
+        </item>
+        <item>طريق المطار
+        </item>
+        <item>عبدون
+        </item>
+        <item>عرجان
+        </item>
+        <item>ماركا الجنوبيه
+        </item>
+        <item>ماركا الشمالية
+        </item>
+        <item>مرج الحمام
+        </item>
+        <item>ناعور
+        </item>
+        <item>وادي الحدادة
+        </item>
+        <item>وادي صقرة
+        </item>
+        <item>وسط البلد
+        </item>
+        <item>ياجوز</item>
+
+    </array>
+
+    <array name="irbid_districts">
+        <item> قصبة إربد</item>
+        <item>الرمثا</item>
+        <item>الكورة </item>
+        <item> بني كنانة </item>
+        <item>الأغوار الشمالية</item>
+        <item>الحصن</item>
+        <item>المزار الشمالي</item>
+        <item>الطيبة</item>
+        <item>كفر أسد</item>
+        <item>النعيمة</item>
+        <item>الصريح</item>
+        <item> ايدون</item>
+        <item>كتم</item>
+        <item> شطنا</item>
+        <item>عالية</item>
+        <item>لواء الوسطية</item>
+    </array>
+
+    <array name="zarka_districts">
+        <item>الزرقاء</item>
+        <item>المنطقة الحرة</item>
+        <item>حي الزواهره</item>
+        <item>حي ابن سينا</item>
+        <item>حي الاميره هيا</item>
+        <item>حي الأمير محمد</item>
+        <item>مدينة الشرق</item>
+        <item>الزرقاء الجديدة</item>
+        <item>ياجوز</item>
+        <item>حي جبر</item>
+        <item>حي معصوم</item>
+        <item>حي رمزي</item>
+        <item>حي الحسين</item>
+        <item>مدينة المجد</item>
+        <item>حي الجندي</item>
+        <item>حي الفلاح</item>
+        <item>حي الجنينة</item>
+        <item>حي الأمير عبد الله</item>
+        <item>حي الأمير علي</item>
+        <item>جبل الأمير حسن</item>
+        <item>حي الأمير حمزة</item>
+        <item>حي الأميرة رحمة</item>
+        <item>حي جناعه</item>
+        <item>اسكان الأمير هاشم تطوير النقب</item>
+        <item>الفاخورة</item>
+        <item>حي العراتفة</item>
+        <item>الشمالي</item>
+        <item>حي النزهة</item>
+        <item>جبل طارق الحلايبة</item>
+        <item>حي المصفاة</item>
+        <item>حي الزواهرة</item>
+        <item>بيرين</item>
+    </array>
+
+    <array name="ajloun_districts">
+        <item> كفرنجة</item>
+        <item>الجنيد</item>
+        <item>ديار عنجرة </item>
+        <item>ديار خيط اللبن </item>
+        <item>عين جنة</item>
+        <item>اشتفينا</item>
+        <item>قضاء صخرة</item>
+        <item>قضاء عرجان</item>
+        <item>قصبة عجلون</item>
+    </array>
+
+    <array name="madaba_districts">
+        <item>قضاء مادبا</item>
+        <item>قضاء جرينة</item>
+        <item>قضاء ماعين</item>
+        <item>قضاء الفيصلية</item>
+        <item>قضاء ذيبان</item>
+        <item>قضاء العريض</item>
+        <item>قضاء مليح</item>
+    </array>
+
+    <array name="mafraq_districts">
+        <item>قضاء أم الجمال</item>
+        <item>قضاء أم القطين</item>
+        <item>قضاء إرحاب</item>
+        <item>قضاء الخالدية </item>
+        <item>قضاء المنشية</item>
+        <item>قضاء بلعما</item>
+        <item>قضاء حوشا</item>
+        <item>قضاء دير الكهف</item>
+        <item>قضاء صبحا</item>
+        <item>قصبة المفرق</item>
+        <item>البادية الشمالية</item>
+        <item>الرويشد</item>
+    </array>
+
+    <array name="aqaba_districts">
+        <item>قصبة العقبة</item>
+        <item>القويرة</item>
+        <item>وادي عربة</item>
+        <item>الديسة</item>
+    </array>
+
+    <array name="jarash_districts">
+        <item>قصبة جرش</item>
+        <item>المصطبة</item>
+        <item>برما</item>
+    </array>
+
+    <array name="alkarak_districts">
+        <item> قصبة الكرك</item>
+        <item>المزار الجنوبي </item>
+        <item> لقصر </item>
+        <item>الاغوار الجنوبية</item>
+        <item>عي</item>
+        <item>فقوع</item>
+        <item>القطرانة</item>
+    </array>
+
+    <array name="tafeleh_districts">
+        <item>قصبة الطفيلة</item>
+        <item>البصيرا</item>
+        <item>الحسا</item>
+    </array>
+
+    <array name="alsalt_districts">
+        <item>قصبة السلط</item>
+        <item>ماحص</item>
+        <item>الفحيص</item>
+        <item>دير علا</item>
+        <item>عين الباشا</item>
+        <item>الشونة الجنوبية</item>
+        <item>الفحيص</item>
+        <item>ماحص</item>
+    </array>
+
+    <array name="maan_districts">
+        <item>قصبة معان</item>
+        <item>البتراء</item>
+        <item>الشوبك</item>
+        <item>الحسينية</item>
+        <item>قضاء أيل</item>
+        <item>قضاء الجفر</item>
+        <item>قضاء المريغة</item>
+        <item>قضاء أذرح</item>
+    </array>
+
+    <string name="edit">Edit</string>
+    <string name="cancel">Cancel</string>
+
+</resources>

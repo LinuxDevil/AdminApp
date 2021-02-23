@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~
+  ~ Copyright RectiCode(c) 2020.
+  ~ All Rights Reserved
+  ~
+  ~ This product is protected by copyright and distributed under
+  ~ licenses restricting copying, distribution and de-compilation.
+  ~
+  ~ Created by Ali Mohammad
+  ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+        <variable
+            name="listener"
+            type="com.aligmohammad.doctorappclient.ui.dialogs.OnDialogInteract" />
+
+        <variable
+            name="viewModel"
+            type="com.aligmohammad.doctorappclient.ui.dialogs.doctorconsulting.requestdoctornurse.RequestDoctorNurseBottomSheetViewModel" />
+
+    </data>
+
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutDescription="@xml/request_doctor_nurse_bottom_sheet_fragment_scene"
+        tools:context=".ui.dialogs.doctorconsulting.requestdoctornurse.RequestDoctorNurseBottomSheetFragment">
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/back_black_icon"
+                android:gravity="center_vertical"
+                android:onClick="@{listener::onBackButtonClicked}" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:gravity="start"
+                android:text="Request Doctor / Nurse"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/dateTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:labelFor="@id/insuranceCompanySpinner"
+            android:text="@string/select_city"
+            app:layout_constraintTop_toBottomOf="@id/header" />
+
+        <Spinner
+            android:id="@+id/dateEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:entries="@array/spinner"
+            android:padding="5dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dateTextView" />
+
+        <TextView
+            android:id="@+id/districtTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:labelFor="@id/insuranceCompanySpinner"
+            android:text="@string/select_district"
+            app:layout_constraintTop_toBottomOf="@id/dateEditText" />
+
+        <Spinner
+            android:id="@+id/districtSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:entries="@array/spinner"
+            android:padding="5dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/districtTextView" />
+
+        <TextView
+            android:id="@+id/insuranceCompanyTextViewTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:labelFor="@id/insuranceCompanySpinner"
+            android:text="@string/select_doctor_major"
+            app:layout_constraintTop_toBottomOf="@id/districtSpinner" />
+
+        <Spinner
+            android:id="@+id/insuranceCompanyTextViewSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:entries="@array/spinner"
+            android:padding="5dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/insuranceCompanyTextViewTextView" />
+
+        <TextView
+            android:id="@+id/totalTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Total XXX JD"
+            app:layout_constraintTop_toBottomOf="@id/insuranceCompanyTextViewSpinner" />
+
+
+        <Button
+            android:id="@+id/confirm_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/request"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/totalTextView" />
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+</layout>

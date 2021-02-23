@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~
+  ~ Copyright RectiCode(c) 2020.
+  ~ All Rights Reserved
+  ~
+  ~ This product is protected by copyright and distributed under
+  ~ licenses restricting copying, distribution and de-compilation.
+  ~
+  ~ Created by Ali Mohammad
+  ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutDescription="@xml/doctor_profile_fragment_scene">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/backgroundImage"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:contentDescription="@string/backgroundImage"
+            android:src="@color/colorSecondaryVariant"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/doctorImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="40dp"
+            android:contentDescription="@string/doctor_image"
+            android:src="@drawable/logo"
+            app:civ_border_color="@color/secondary"
+            app:civ_border_overlay="true"
+            app:civ_border_width="2dp"
+            app:layout_constraintEnd_toEndOf="@id/backgroundImage"
+            app:layout_constraintStart_toStartOf="@id/backgroundImage"
+            app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+        <LinearLayout
+            android:id="@+id/middleSectionLinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            app:layout_constraintTop_toBottomOf="@id/backgroundImage">
+
+            <LinearLayout
+                android:id="@+id/rightSection"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="60"
+                android:orientation="vertical"
+                android:padding="30dp"
+                android:weightSum="90">
+
+                <TextView
+                    android:id="@+id/doctorName"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="3dp"
+                    android:layout_weight="30"
+                    android:gravity="center_vertical"
+                    android:text="Profile Name" />
+
+                <TextView
+                    android:id="@+id/doctorMajor"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="3dp"
+                    android:layout_weight="20"
+                    android:gravity="center_vertical"
+                    android:text="Major" />
+
+                <TextView
+                    android:id="@+id/doctorYearsOfExperience"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="3dp"
+                    android:layout_weight="20"
+                    android:gravity="center_vertical"
+                    android:text="Years of experience" />
+
+                <TextView
+                    android:id="@+id/doctorRelatedInsurances"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="3dp"
+                    android:layout_weight="20"
+                    android:gravity="center_vertical"
+                    android:text="Related Insurances" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/leftSection"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="40"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:weightSum="3">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/doctorQualificationsButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="5dp"
+                    android:text="@string/qualifications"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/doctorLocation"
+                    style="@style/TextAppearance.AppCompat.Body1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Location"
+                    android:textStyle="italic" />
+
+                <RatingBar
+                    android:id="@+id/doctorRating"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:rating="4" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+
+</layout>

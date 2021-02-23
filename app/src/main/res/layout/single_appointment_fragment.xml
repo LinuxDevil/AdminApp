@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="listener"
+            type="com.aligmohammad.doctorappclient.ui.dialogs.OnDialogInteract" />
+
+        <variable
+            name="viewModel"
+            type="com.aligmohammad.doctorappclient.ui.dialogs.appointmentmanagment.singleappointment.SingleAppointmentViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        tools:context=".ui.dialogs.appointmentmanagment.singleappointment.SingleAppointment">
+
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/back_black_icon"
+                android:gravity="center_vertical"
+                android:onClick="@{listener::onBackButtonClicked}" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:gravity="start"
+                android:text="@string/new_appointment"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/topLinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header">
+
+            <TextView
+                android:id="@+id/periodTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="40"
+                android:gravity="center"
+                android:text="@string/period"
+                android:textColor="@color/black" />
+
+            <ImageButton
+                android:id="@+id/dayTime"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+
+                android:layout_width="wrap_content"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/day_time"
+                android:src="@drawable/sun" />
+
+            <ImageButton
+                android:id="@+id/nightTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/night_time"
+                android:src="@drawable/moon" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/timeTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:labelFor="@id/timeEditText"
+            android:text="Start Time"
+            app:layout_constraintTop_toBottomOf="@id/topLinear" />
+
+        <EditText
+            android:id="@+id/timeEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:drawableEnd="@drawable/time_icon"
+            android:inputType="none"
+            android:padding="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/timeTextView" />
+
+        <TextView
+            android:id="@+id/endTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:labelFor="@id/endTimeEditText"
+            android:text="End Time"
+            app:layout_constraintTop_toBottomOf="@id/timeEditText" />
+
+        <EditText
+            android:id="@+id/endTimeEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:drawableEnd="@drawable/time_icon"
+            android:inputType="none"
+            android:padding="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/endTime" />
+
+        <TextView
+            android:id="@+id/fromDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:labelFor="@id/endTimeEditText"
+            android:text="From Date"
+            app:layout_constraintTop_toBottomOf="@id/endTimeEditText" />
+
+        <EditText
+            android:id="@+id/dateEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:drawableEnd="@drawable/date_icon"
+            android:inputType="none"
+            android:padding="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fromDate" />
+
+        <TextView
+            android:id="@+id/toDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:labelFor="@id/endTimeEditText"
+            android:text="To Date"
+            app:layout_constraintTop_toBottomOf="@id/dateEditText" />
+
+        <EditText
+            android:id="@+id/toDateEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:drawableEnd="@drawable/date_icon"
+            android:inputType="none"
+            android:padding="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toDate" />
+
+
+
+
+        <Button
+            android:id="@+id/reserveButton"
+            style="@style/Theme.DoctorApp.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/circular_menu_item"
+            android:text="@string/reserve"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toDateEditText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
